@@ -10,8 +10,8 @@ Team project for CSS 475. Built with React + Vite.
 ## Getting started
 
 ```bash
-git clone <repo-url>
-cd <repo-folder>
+git clone https://github.com/eblaug-uw/Innerjoined
+cd Innerjoined
 npm install
 npm run dev
 ```
