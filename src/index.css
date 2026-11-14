@@ -1,0 +1,3 @@
+html, body, #root { margin: 0; height: 100%; background: #15151E; }
+.stage { height: 100%; display: grid; place-items: center; }
+.stage svg { width: min(90vw, 1000px); height: auto; }
