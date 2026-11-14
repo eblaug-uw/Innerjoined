@@ -1,3 +1,33 @@
-html, body, #root { margin: 0; height: 100%; background: #15151E; }
-.stage { height: 100%; display: grid; place-items: center; }
+html, body, #root { margin: 0; min-height: 100%; background: #15151E; }
+
+.stage { min-height: 100vh; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem 0; box-sizing: border-box; }
 .stage svg { width: min(90vw, 1000px); height: auto; }
+
+.btn {
+  background: #E10600; color: #fff; text-decoration: none;
+  padding: 0.75rem 2rem; font-family: 'Titillium Web', sans-serif;
+  font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+}
+.btn:hover { background: #ff1e14; }
+
+.back {
+  align-self: flex-start; margin-left: 2rem; color: #949498;
+  text-decoration: none; font-family: 'Titillium Web', sans-serif;
+}
+.back:hover { color: #E10600; }
+
+.explorer { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: min(95vw, 900px); }
+.tabs { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+.tabs button {
+  background: transparent; color: #fff; border: 1px solid #38383F;
+  padding: 0.4rem 1rem; font-family: 'Titillium Web', sans-serif; font-weight: 600; cursor: pointer;
+}
+.tabs button:hover { border-color: #E10600; }
+.tabs button.active { background: #E10600; border-color: #E10600; }
+
+.data-table { border-collapse: collapse; color: #fff; font-family: 'Titillium Web', sans-serif; min-width: 400px; }
+.data-table th { background: #E10600; text-align: left; padding: 0.5rem 1rem; }
+.data-table td { padding: 0.5rem 1rem; border-bottom: 1px solid #38383F; }
+
+.error { color: #E10600; }
+.muted { color: #949498; }

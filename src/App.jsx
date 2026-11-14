@@ -1,19 +1,39 @@
-import '@fontsource/titillium-web/400.css';
-import '@fontsource/titillium-web/600.css';
-import '@fontsource/titillium-web/900.css';
+import { Routes, Route, Link } from 'react-router';
+import DataExplorer from './DataExplorer';
 
-const F1_RED = "#FF1E00";
+const F1_RED = '#E10600';
 
-export default function App(){
+function Home() {
   return (
-    <main className="stage">
-      <svg viewBox="0 0 800 400" role="img" aria-label="Coming Soon">
+    <>
+      <svg viewBox="0 0 800 400" role="img" aria-label="Team Innerjoined, CSS 475, Project coming soon">
         <g fill={F1_RED} textAnchor="middle" fontFamily="'Titillium Web', sans-serif">
-          <text x="400" y="150" fontSize="72" fontWeight="800">Team Innerjoined</text>
+          <text x="400" y="150" fontSize="72" fontWeight="900">Team Innerjoined</text>
           <text x="400" y="230" fontSize="40" fontWeight="600">CSS 475</text>
           <text x="400" y="300" fontSize="28" letterSpacing="4">PROJECT COMING SOON</text>
         </g>
       </svg>
-    </main> 
+      <Link to="/explore" className="btn">Data Explorer</Link>
+    </>
+  );
+}
+
+function ExplorerPage() {
+  return (
+    <>
+      <Link to="/" className="back">← Home</Link>
+      <DataExplorer />
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <main className="stage">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<ExplorerPage />} />
+      </Routes>
+    </main>
   );
 }
